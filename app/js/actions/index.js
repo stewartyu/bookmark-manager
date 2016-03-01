@@ -1,17 +1,11 @@
 let nextBookmarkId = 0;
 
-const parseTags = (tags) => {
-  return tags.split(',').map(tag => {
-    return tag.trim();
-  });
-};
-
 export const addBookmark = (text, tags) => {
   return {
     type: 'ADD_BOOKMARK',
     id: nextBookmarkId++,
     text,
-    tags: parseTags(tags)
+    tags
   };
 };
 
