@@ -13,7 +13,7 @@ const Bookmark = ({
   id,
   tags
 }) => {
-  let renderedBookmark = <li>
+  let renderedBookmark = <li key={id}>
     <p>{text}</p>
     <ul>
       {tags.map(tag => (
