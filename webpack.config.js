@@ -1,11 +1,10 @@
 module.exports = {
   entry: {
-    javascript: "./app/js/app.js",
-    html: "./app/index.html"
+    javascript: "./app/js/app.js"
   },
   output: {
-    path: __dirname + "/dist",
-    filename: "./js/app.js"
+    path: __dirname + "/public/js",
+    filename: "./app.js"
   },
   module: {
     loaders: [
