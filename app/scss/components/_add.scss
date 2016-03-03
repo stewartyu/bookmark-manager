@@ -1,5 +1,7 @@
 .add {
     padding: $margin;
+
+    text-align: center;
 }
 
 .add__input {
@@ -10,7 +12,8 @@
     margin-left: $margin;
     padding: $margin/2 $margin;
 
-    background-color: $accent-color;
+    background-color: $green;
 
+    color: $white;
     font-size: $standard-font-size;
 }

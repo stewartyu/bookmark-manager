@@ -1,0 +1,59 @@
+.bookmark {
+    @include clearfix;
+
+    padding-bottom: $margin/2;
+
+    &:nth-of-type(-n+1) {
+        border-bottom: 1px solid $grey;
+    }
+}
+
+.bookmark__url {
+    padding: $margin;
+
+    font-size: $large-font-size;
+}
+
+.bookmark__tags {
+    display: flex;
+    margin-left: $margin;
+}
+
+.bookmark__tag {
+    padding: $margin/2;
+
+    border-radius: $margin;
+    background-color: $yellow;
+
+    font-size: $small-font-size;
+
+    &:nth-of-type(n+1) {
+        margin-right: $margin/2;
+    }
+}
+
+.bookmark__actions {
+    float: right;
+
+    display: flex;
+    align-items: center;
+    margin-right: $margin/2;
+}
+
+.bookmark__action {
+    margin: $margin/2;
+
+    font-size: $small-font-size;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &.bookmark--edit {
+        padding: $margin/2 $margin;
+
+        background-color: $green;
+
+        color: $white;
+    }
+}

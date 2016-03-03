@@ -13,17 +13,19 @@ const Bookmark = ({
   id,
   tags
 }) => {
-  let renderedBookmark = <li>
-    <p>{text}</p>
-    <ul>
+  let renderedBookmark = <li className="bookmark">
+    <p className="bookmark__url">{text}</p>
+    <ul className="bookmark__tags">
       {tags.map(tag => (
-        <li key={tag}>{tag}</li>
+        <li className="bookmark__tag" key={tag}>{tag}</li>
       ))}
     </ul>
-    <a onClick={onEditClick}>edit</a>
-    <a onClick={onDeleteClick}>delete</a>
+    <ul className="bookmark__actions">
+      <li className="bookmark__action bookmark--edit"><a onClick={onEditClick}>edit</a></li>
+      <li className="bookmark__action bookmark--delete"><a onClick={onDeleteClick}>delete</a></li>
+    </ul>
   </li>;
-  let editingBookmark = <li><AddBookmark isEditing={isEditing} text={text} id={id} tags={tags} /></li>;
+  let editingBookmark = <li className="bookmark"><AddBookmark isEditing={isEditing} text={text} id={id} tags={tags} /></li>;
 
   return isEditing ? editingBookmark : renderedBookmark;
 };

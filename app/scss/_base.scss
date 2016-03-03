@@ -4,13 +4,20 @@ html {
 
 body {
     font-size: $standard-font-size;
-    text-align: center;
 }
 
 input {
     padding: $margin/2;
 
+    outline: 1px solid $grey;
+
     font-size: $standard-font-size;
+
+    transition: outline 0.5s;
+
+    &:focus {
+        outline: 1px solid $yellow;
+    }
 }
 
 button {
@@ -21,5 +28,6 @@ h1 {
     padding: $margin;
 
     font-weight: bold;
-    font-size: $large-font-size;
+    font-size: $xlarge-font-size;
+    text-align: center;
 }
