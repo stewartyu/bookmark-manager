@@ -15,7 +15,7 @@
     "immutable": "^3.7.6",
     "jade": "~1.11.0",
     "jquery": "^2.2.1",
-    "mongoose": "^4.2.5",
+    "mongoose": "^4.4.5",
     "morgan": "~1.6.1",
     "react": "^0.14.5",
     "react-dom": "^0.14.5",

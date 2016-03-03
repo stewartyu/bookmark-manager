@@ -13,31 +13,36 @@ let AddBookmark = ({ dispatch, isEditing, text, id, tags }) => {
     });
   };
 
-  let onAddBookmark = () => {
-    dispatch(addBookmark(input.value, parseTags(tagsInput.value)));
+  let onAddBookmark = (response) => {
+    dispatch(addBookmark(response._id, input.value, parseTags(tagsInput.value)));
     input.value = '';
     tagsInput.value = '';
   };
 
-  let onUpdateBookmark = () => {
-    dispatch(updateBookmark(id, input.value, parseTags(tagsInput.value)));
+  let onUpdateBookmark = (response) => {
+    dispatch(updateBookmark(response._id, input.value, parseTags(tagsInput.value)));
     input.value = '';
     tagsInput.value = '';
   };
 
-  let onClickHandler = isEditing ? onUpdateBookmark : onAddBookmark;
+  let onClickHandler = (response) => {
+    return isEditing ? onUpdateBookmark(response) : onAddBookmark(response);
+  };
 
   let storeBookmark = () => {
+    let id = isEditing ? id : parseInt(Math.random() * 10000000, 10).toString(); // TODO: make this increment properly
+    let url = isEditing ? '/api/bookmarks/update' : '/api/bookmarks/add';
+
     $.ajax({
       type: 'POST',
-      url: '/api/bookmarks/add',
+      url: url,
       data: {
+        id: id,
         url: input.value,
         tags: JSON.stringify(parseTags(tagsInput.value))
       },
       success: (response) => {
-        console.log('AJAX PROMISE', response);
-        onClickHandler();
+        onClickHandler(response);
       }
     });
   };

@@ -1,9 +1,7 @@
-let nextBookmarkId = 0;
-
-export const addBookmark = (text, tags) => {
+export const addBookmark = (id, text, tags) => {
   return {
     type: 'ADD_BOOKMARK',
-    id: nextBookmarkId++,
+    id,
     text,
     tags
   };
@@ -21,7 +19,7 @@ export const updateBookmark = (id, text, tags) => {
     type: 'UPDATE_BOOKMARK',
     id,
     text,
-    tags: parseTags(tags)
+    tags: tags
   };
 };
 
