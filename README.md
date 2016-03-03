@@ -2,21 +2,15 @@
 
 ## Getting Started
 
-### Install Mongo
+### Install Sass
 
-    brew install mongodb
+    [sudo] gem install sass
 
 ### Install Node Modules
 
     npm install
 
 ## Running the Project
-
-### Start Mongo
-
-    mongod --config /usr/local/etc/mongod.conf
-
-### Start Server
 
     npm run start
 
