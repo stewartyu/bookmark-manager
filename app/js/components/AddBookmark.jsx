@@ -21,14 +21,14 @@ let AddBookmark = ({ dispatch, isEditing, text, id, tags }) => {
   let onClickHandler = isEditing ? onUpdateBookmark : onAddBookmark;
 
   return (
-    <div>
-      <input ref={node => {
+    <div className="add">
+      <input className="add__input" ref={node => {
         input = node;
       }} defaultValue={text} placeholder="Bookmark URL" />
-      Tags: <input ref={node => {
+      <span className="add__tags-container">Tags: <input className="add__tags-input" ref={node => {
         tagsInput = node;
-      }} defaultValue={tags} placeholder="Comma separated" />
-      <button onClick={onClickHandler}>
+      }} defaultValue={tags} placeholder="Comma separated" /></span>
+      <button className="add__save" onClick={onClickHandler}>
         Save
       </button>
     </div>

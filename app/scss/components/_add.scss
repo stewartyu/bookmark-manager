@@ -1,0 +1,16 @@
+.add {
+    padding: $margin;
+}
+
+.add__input {
+    margin-right: $margin;
+}
+
+.add__save {
+    margin-left: $margin;
+    padding: $margin/2 $margin;
+
+    background-color: $accent-color;
+
+    font-size: $standard-font-size;
+}

@@ -1,0 +1,25 @@
+html {
+    font-family: $default-font-family;
+}
+
+body {
+    font-size: $standard-font-size;
+    text-align: center;
+}
+
+input {
+    padding: $margin/2;
+
+    font-size: $standard-font-size;
+}
+
+button {
+    border: 0;
+}
+
+h1 {
+    padding: $margin;
+
+    font-weight: bold;
+    font-size: $large-font-size;
+}

@@ -33,7 +33,7 @@ const BookmarkList = ({
   onEditClick,
   onDeleteClick
   }) => (
-  <ul>
+  <ul className="bookmark-list">
     {bookmarks.map(bookmark =>
         <Bookmark
           key={bookmark.id}
